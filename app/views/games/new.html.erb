@@ -1,0 +1,20 @@
+<!-- app/views/games/new.html.erb -->
+<h1>Welcome to the Longest Word Game!</h1>
+
+<div>
+  <p>Here is your grid:</p>
+  <ul>
+    <% @letters.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+  </ul>
+</div>
+
+<form action="/score" method="post" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="word">Enter your word:</label>
+  <input type="text" name="word" id="word" required>
+
+  <input type="submit" value="Submit">
+</form>

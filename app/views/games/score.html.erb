@@ -1,0 +1,9 @@
+<h1>Now your results</h1>
+
+<p>Your word: <%= @word %></p>
+<p>Time Taken to answer: <%= params[:time_taken] %></p>
+<p>Your score: <%= @score %></p>
+<p>Message: <%= @message %></p>
+<p>API Response: <%= @api_response %></p>
+
+<%= link_to 'Play Again', new_path %>
